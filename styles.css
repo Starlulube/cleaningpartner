@@ -1,0 +1,722 @@
+/* 通用樣式 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 標題和Logo樣式 */
+header {
+    background-color: #333; /* 黑色背景 */
+    color: white;
+    display: flex;
+    align-items: center; /* 垂直對齊 */
+    justify-content: flex-start; /* 讓Logo和文字從左側排列 */
+    padding: 20px 40px; /* 縮小 padding，減少高度 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo 和文字容器 */
+header a {
+    display: flex;
+    align-items: center; /* 讓Logo和文字垂直對齊 */
+    color: black; /* 設置文字顏色為白色 */
+    text-decoration: none; /* 去掉底線 */
+    font-size: 22px; /* 調整字體大小 */
+    font-weight: bold; /* 加強字體的粗細 */
+    letter-spacing: 1px; /* 增加字母間距 */
+    transition: color 0.3s ease; /* 添加過渡效果 */
+}
+
+header a span:hover {
+    color: #4CAF50 !important; /* 滑鼠懸停時文字顏色變綠色 */
+}
+
+/* 設定Logo的大小和與文字之間的間距 */
+header a .logo {
+    width: 40px; /* 設定 logo 的寬度（可以根據需要調整） */
+    margin-right: 0px; /* 設定 logo 和文字之間的間距 */
+    margin-left: 20px; /* 增加左邊距離，讓 Logo 往右移 */
+}
+
+header a span {
+    font-size: 20px; /* 根據需要調整字體大小 */
+    letter-spacing: -1px;
+}
+
+/* 導航列樣式 */
+nav ul {
+    display: flex;
+    justify-content: flex-end; /* 項目右對齊 */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-left: 30px; /* 增加項目之間的間距 */
+}
+
+nav a {
+    color: white; /* 初始文字顏色為白色 */
+    text-decoration: none; /* 去掉底線 */
+    font-size: 14px; /* 設置文字大小 */
+    font-weight: 600; /* 設置字體粗細 */
+    letter-spacing: 1px; /* 增加字母間距 */
+    transition: color 0.3s ease; /* 添加過渡效果 */
+}
+
+nav a:hover {
+    color: #4CAF50 !important; /* 滑鼠懸停時，變更文字顏色 */
+}
+
+/* 新增區隔樣式 */
+nav .service-item a {
+    border-right: 2px solid #fff; /* 增加右邊邊框區隔 */
+    padding-right: 20px; /* 給右邊邊框一點間距 */
+}
+
+/* 響應式設計，當螢幕寬度小於768px時 */
+@media (max-width: 768px) {
+    header a {
+        font-size: 20px; /* 在小螢幕上調整標題字體大小 */
+    }
+
+    nav a {
+        font-size: 16px; /* 在小螢幕上調整導航字體大小 */
+    }
+
+    nav ul {
+        flex-direction: column; /* 導航菜單垂直排列 */
+        text-align: center; /* 文字置中 */
+    }
+
+    nav li {
+        margin-left: 0;
+        margin-bottom: 10px; /* 項目之間增加間距 */
+    }
+}
+
+
+
+
+
+
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;  /* 可以根據需要調整容器的寬度 */
+    height: 100%; /* 或者調整為適當的高度 */
+}
+
+.overlay-image {
+    width: 20%;  /* 調整圖片的大小 */
+    height: auto;  /* 保持圖片的比例 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.text-overlay {
+    position: absolute;
+    font-family: 'Klee One', sans-serif;
+    top: 70%; /* 調整文字位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: rgb(45, 38, 38);
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+section {
+    padding: 20px;
+    background-color: white;
+    margin-left: auto; /* 自動將框推到右邊 */
+    margin-right: 20px; /* 與右側留白 */
+    width: auto; /* 寬度由內容決定 */
+    max-width: 800px; /* 最大寬度限制 */
+    border-radius: 8px; /* 圓角 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 投影效果 */
+    text-align: right; /* 文字內容靠右對齊 */
+}
+
+h2 {
+    color: #333;
+    text-align: center; /* 標題居中 */
+    margin: 0 auto; /* 自動左右間距，實現居中 */
+}
+/* 第一個區域樣式 */
+
+.hero-container {
+    position: relative;  /* 保持相對定位，讓其在父容器中保持正常流動 */
+     /* 往上移動，這裡的 50vh 代表視口的一半高度，根據需要調整 */
+    z-index: 1; /* 確保 hero-container 在圖片上方 */
+}
+
+#about {
+    position: relative; /* 改為相對定位 */
+    top: -80vh; /* 添加這一行，讓 #about 也向上偏移 */
+    padding: 20px;
+    background-color: #f9f9f9; /* 浅灰色背景 */
+    margin: 20px auto; /* 居中 */
+    max-width: 800px; /* 最大寬度 */
+    border: 2px solid #ddd; /* 添加邊框 */
+    border-radius: 8px; /* 圓角 */
+    box-shadow: 0 4 20px rgba(0, 0, 0, 0.1); /* 添加投影 */
+    margin-bottom: 200px; /* 增加底部間距 */
+    transition: transform 0.3s ease-out; /* 滑動進場動畫 */
+    z-index: 2;
+}
+
+#about:hover {
+    transform: translateY(-5px); /* 滑動效果 */
+}
+
+
+
+
+/* 花瓶圖片容器 */
+.vase-image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 讓圖片高度為視口高度 */
+    margin-top: 0px; /* 可調整與上方區塊的間距 */
+}
+
+/* 花瓶圖片 */
+.vase-image {
+    width: 100%; /* 讓圖片寬度占滿容器 */
+    height: 100%; /* 讓圖片高度為容器的高度，達到視口大小 */
+    object-fit: cover; /* 保持比例，並裁剪圖片使其覆蓋整個容器 */
+    object-position: bottom; /* 讓圖片的裁剪位置靠下 */
+    display: block;
+    border-radius: 8px; /* 圓角效果 */
+}
+
+/* 核心價值區塊的樣式 */
+.core-values {
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f4f8, #ffffff); /* 漸變背景 */
+    margin: 30px auto;
+    max-width: 1000px; /* 擴展最大寬度 */
+    border-radius: 15px; /* 更大的圓角 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 更柔和的陰影效果 */
+    overflow: hidden; /* 防止內部元素溢出 */
+    transition: transform 0.3s ease-out; /* 滑動進場動畫 */
+}
+
+.core-values:hover {
+    transform: translateY(-5px); /* 滑動效果 */
+}
+
+/* 為核心價值中的內容設計排版 */
+.values-container {
+    display: flex;
+    gap: 30px; /* 增加項目間距 */
+    justify-content: space-evenly; /* 均分項目間距 */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* 核心價值區塊的樣式 */
+.core-values {
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f4f8, #ffffff); /* 漸變背景 */
+    margin: 30px auto;
+    max-width: 1000px; /* 擴展最大寬度 */
+    border-radius: 15px; /* 更大的圓角 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 更柔和的陰影效果 */
+    overflow: hidden; /* 防止內部元素溢出 */
+    transition: transform 0.3s ease-out; /* 滑動進場動畫 */
+}
+
+.core-values:hover {
+    transform: translateY(-5px); /* 滑動效果 */
+}
+
+/* 為核心價值中的內容設計排版 */
+.values-container {
+    display: flex;
+    gap: 30px; /* 增加項目間距 */
+    justify-content: space-evenly; /* 均分項目間距 */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* 每個價值項目的樣式 */
+.value-item {
+    flex: 1 1 250px; /* 使每個項目有自適應寬度，並限制最小寬度 */
+    padding: 25px;
+    background-color: #ffffff; /* 白色背景 */
+    border-radius: 15px; /* 更大的圓角 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* 更明顯的陰影效果 */
+    text-align: center;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* 動畫效果 */
+    margin-bottom: 20px; /* 增加底部間距 */
+}
+
+.value-item:hover {
+    transform: translateY(-5px); /* 滑動效果 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* 滑動時加強陰影 */
+}
+
+.value-item h3 {
+    font-size: 22px; /* 增大標題字體 */
+    color: #333; /* 深色文字 */
+    margin-bottom: 10px;
+    font-weight: bold; /* 加粗標題 */
+    font-family: 'Klee One', sans-serif; /* 設置字體 */
+}
+
+.value-item p {
+    font-size: 16px; /* 調整段落文字大小 */
+    color: #666; /* 輕微灰色文字 */
+    line-height: 1.6; /* 行間距 */
+    margin-top: 10px;
+    font-family: 'Klee One', sans-serif; /* 設置字體 */
+}
+
+h4 {
+    letter-spacing: 2px; /* 調整文字間隔 */
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    font-family: 'Klee One', sans-serif;
+  }
+  
+  p.intro {
+    font-size: 18px; /* 調整字型大小 */
+    line-height: 2.5; /* 調整行距 */
+    color: #444; /* 深灰色 */
+    font-weight: bold; /* 加粗文字 */
+    margin-bottom: 20px;
+    font-family: 'Klee One', sans-serif;
+  }
+  
+  p.promise {
+    font-size: 16px;
+    line-height: 2;
+    color: #555; /* 中灰色 */
+    margin-bottom: 15px;
+    text-align: left; /* 靠左對齊 */
+    font-family: 'Klee One', sans-serif;
+  }
+  
+  p.ending {
+    font-size: 16px;
+    line-height: 2.2;
+    color: #666; /* 淺灰色 */
+    font-style: italic; /* 斜體 */
+    text-align: right; /* 靠右對齊 */
+    margin-top: 20px;
+    font-family: 'Klee One', sans-serif;
+  }
+  
+
+
+
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+header {
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+header h1 {
+    color: black;
+    transition: color 1s ease;
+}
+
+nav a {
+    color: black; /* 初始文字顏色 */
+    transition: color 1s ease;
+}
+
+nav a.scrolled {
+    color: white; /* 滾動後的文字顏色 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;  /* 可以根據需要調整容器的寬度 */
+    height: 100%; /* 或者調整為適當的高度 */
+}
+
+.overlay-image {
+    width: 20%;  /* 調整圖片的大小 */
+    height: auto;  /* 保持圖片的比例 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.text-overlay {
+    position: absolute;
+    font-family: 'Klee One', sans-serif;
+    top: 70%; /* 調整文字位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: rgb(45, 38, 38);
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+h1 {
+    font-size: 24px; /* 設置標題的字型大小 */
+    margin: 0;
+}
+
+.logo {
+    width: 60px; /* 設置圖片寬度 */
+}
+
+h1 {
+    margin: 0; /* 去掉額外的外邊距 */
+}
+
+
+
+
+section {
+    padding: 20px;
+    background-color: white;
+    margin-left: auto; /* 自動將框推到右邊 */
+    margin-right: 20px; /* 與右側留白 */
+    width: auto; /* 寬度由內容決定 */
+    max-width: 800px; /* 最大寬度限制 */
+    border-radius: 8px; /* 圓角 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 投影效果 */
+    text-align: right; /* 文字內容靠右對齊 */
+}
+
+h2 {
+    color: #333;
+    text-align: center; /* 標題居中 */
+    margin: 0 auto; /* 自動左右間距，實現居中 */
+}
+/* 第一個區域樣式 */
+
+.hero-container {
+    position: relative;  /* 保持相對定位，讓其在父容器中保持正常流動 */
+     /* 往上移動，這裡的 50vh 代表視口的一半高度，根據需要調整 */
+    z-index: 1; /* 確保 hero-container 在圖片上方 */
+}
+
+#about {
+    position: relative; /* 改為相對定位 */
+    top: -80vh; /* 添加這一行，讓 #about 也向上偏移 */
+    padding: 20px;
+    background-color: #f9f9f9; /* 浅灰色背景 */
+    margin: 20px auto; /* 居中 */
+    max-width: 800px; /* 最大寬度 */
+    border: 2px solid #ddd; /* 添加邊框 */
+    border-radius: 8px; /* 圓角 */
+    box-shadow: 0 4 20px rgba(0, 0, 0, 0.1); /* 添加投影 */
+    margin-bottom: 200px; /* 增加底部間距 */
+    transition: transform 0.3s ease-out; /* 滑動進場動畫 */
+    z-index: 2;
+}
+
+#about:hover {
+    transform: translateY(-5px); /* 滑動效果 */
+}
+
+
+
+
+/* 花瓶圖片容器 */
+.vase-image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 讓圖片高度為視口高度 */
+    margin-top: 0px; /* 可調整與上方區塊的間距 */
+}
+
+/* 花瓶圖片 */
+.vase-image {
+    width: 100%; /* 讓圖片寬度占滿容器 */
+    height: 100%; /* 讓圖片高度為容器的高度，達到視口大小 */
+    object-fit: cover; /* 保持比例，並裁剪圖片使其覆蓋整個容器 */
+    object-position: bottom; /* 讓圖片的裁剪位置靠下 */
+    display: block;
+    border-radius: 8px; /* 圓角效果 */
+}
+
+/* 核心價值區塊的樣式 */
+.core-values {
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f4f8, #ffffff); /* 漸變背景 */
+    margin: 30px auto;
+    max-width: 1000px; /* 擴展最大寬度 */
+    border-radius: 15px; /* 更大的圓角 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 更柔和的陰影效果 */
+    overflow: hidden; /* 防止內部元素溢出 */
+    transition: transform 0.3s ease-out; /* 滑動進場動畫 */
+}
+
+.core-values:hover {
+    transform: translateY(-5px); /* 滑動效果 */
+}
+
+/* 為核心價值中的內容設計排版 */
+.values-container {
+    display: flex;
+    gap: 30px; /* 增加項目間距 */
+    justify-content: space-evenly; /* 均分項目間距 */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* 核心價值區塊的樣式 */
+.core-values {
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f4f8, #ffffff); /* 漸變背景 */
+    margin: 30px auto;
+    max-width: 1000px; /* 擴展最大寬度 */
+    border-radius: 15px; /* 更大的圓角 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 更柔和的陰影效果 */
+    overflow: hidden; /* 防止內部元素溢出 */
+    transition: transform 0.3s ease-out; /* 滑動進場動畫 */
+    margin-top: -750px; /* 調整此數值來控制上移的距離 */
+}
+
+.core-values:hover {
+    transform: translateY(-5px); /* 滑動效果 */
+}
+
+/* 為核心價值中的內容設計排版 */
+.values-container {
+    display: flex;
+    gap: 30px; /* 增加項目間距 */
+    justify-content: space-evenly; /* 均分項目間距 */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* 每個價值項目的樣式 */
+.value-item {
+    flex: 1 1 250px; /* 使每個項目有自適應寬度，並限制最小寬度 */
+    padding: 25px;
+    background-color: #ffffff; /* 白色背景 */
+    border-radius: 15px; /* 更大的圓角 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* 更明顯的陰影效果 */
+    text-align: center;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* 動畫效果 */
+    margin-bottom: 20px; /* 增加底部間距 */
+}
+
+.value-item:hover {
+    transform: translateY(-5px); /* 滑動效果 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* 滑動時加強陰影 */
+}
+
+.value-item h3 {
+    font-size: 22px; /* 增大標題字體 */
+    color: #333; /* 深色文字 */
+    margin-bottom: 10px;
+    font-weight: bold; /* 加粗標題 */
+    font-family: 'Klee One', sans-serif; /* 設置字體 */
+}
+
+.value-item p {
+    font-size: 16px; /* 調整段落文字大小 */
+    color: #666; /* 輕微灰色文字 */
+    line-height: 1.6; /* 行間距 */
+    margin-top: 10px;
+    font-family: 'Klee One', sans-serif; /* 設置字體 */
+}
+
+h4 {
+    letter-spacing: 2px; /* 調整文字間隔 */
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    font-family: 'Klee One', sans-serif;
+  }
+  
+  p.intro {
+    font-size: 18px; /* 調整字型大小 */
+    line-height: 2.5; /* 調整行距 */
+    color: #444; /* 深灰色 */
+    font-weight: bold; /* 加粗文字 */
+    margin-bottom: 20px;
+    font-family: 'Klee One', sans-serif;
+  }
+  
+  p.promise {
+    font-size: 16px;
+    line-height: 2;
+    color: #555; /* 中灰色 */
+    margin-bottom: 15px;
+    text-align: left; /* 靠左對齊 */
+    font-family: 'Klee One', sans-serif;
+  }
+  
+  p.ending {
+    font-size: 16px;
+    line-height: 2.2;
+    color: #666; /* 淺灰色 */
+    font-style: italic; /* 斜體 */
+    text-align: right; /* 靠右對齊 */
+    margin-top: 20px;
+    font-family: 'Klee One', sans-serif;
+  }
+  
+
+
+
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #fdf9f7; /* 設置文字顏色為綠色 */
+    text-align: center; /* 讓文字置中 */
+}
+
+/* 預設樣式 */
+header {
+    color: black; /* 初始文字顏色 */
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+nav a {
+    color: black; /* 初始文字顏色 */
+    transition: color 1s ease;
+}
+
+/* 滾動後樣式 */
+header.scrolled {
+    background-color: #333;
+    color: white;
+}
+
+nav a.scrolled {
+    color: white;
+}
+
+/* 預設樣式 */
+header a span {
+    color: black; /* 初始文字顏色 */
+    transition: color 1s ease; /* 添加過渡效果 */
+}
+
+/* 滾動後樣式 */
+header.scrolled a span {
+    color: white; /* 滾動後文字顏色 */
+}
