@@ -202,7 +202,7 @@ h2 {
 
 #about {
     position: relative; /* 改為相對定位 */
-    top: -80vh; /* 添加這一行，讓 #about 也向上偏移 */
+    top: -90vh; /* 添加這一行，讓 #about 也向上偏移 */
     padding: 20px;
     background-color: #f9f9f9; /* 浅灰色背景 */
     margin: 20px auto; /* 居中 */
